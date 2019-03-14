@@ -50,7 +50,7 @@ class Tasks extends React.Component{
         });
         return(
 <article>
-    <button onClick={this.Get} className="btn btn-default">Refresh <span className="fa fa-refresh"></span></button>
+    <button onClick={this.Get} className="btn btn-primary">Refresh <span className="fa fa-refresh"></span></button>
     <Task Post={this.Post} Get={this.Get} />
     {tasks}
 </article>
@@ -164,7 +164,7 @@ class Task extends React.Component{
         var completed = "";
         var completed_at = "";
         if(this.props.task){
-            delete_button = <button onClick={this.Delete} className="btn btn-default" > Delete <span className="fa fa-trash"></span></button>;
+            delete_button = <button onClick={this.Delete} className="btn btn-primary" > Delete <span className="fa fa-trash"></span></button>;
             completed = 
             <div className="field">
                 <label htmlFor="completed">Completed: </label>
@@ -203,7 +203,7 @@ class Task extends React.Component{
         {completed_at}
         {completed}
         <div className="button-list">
-            <button onClick={this.Save} className="btn btn-default" >
+            <button onClick={this.Save} className="btn btn-primary" >
                 Save <span className="fa fa-save"></span>
             </button>
             {delete_button}

@@ -1,6 +1,8 @@
-<div class="central-little-div">
-  <h1>Accedi</h1>
+<article>
+<fieldset>
+  <legend>Sign in</legend>
   <%= render 'form' %>
+  <p><%= link_to "Sign up", signup_path , class: 'btn btn-primary'%></p>
+</fieldset>
 
-  <p><%= link_to "Sign up", signup_path %></p>
-</div>
+</article>

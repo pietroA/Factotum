@@ -1,7 +1,7 @@
 <%= form_for(:session, url: login_path) do |form| %>
 
   <div class="field">
-    <label for="user_name">Nome</label>
+    <label for="user_name">Name</label>
     <%= form.text_field :name, id: :user_name %>
   </div>
 
@@ -10,5 +10,5 @@
     <%= form.password_field :password, id: :user_password %>
   </div>
 
-  <%= form.submit "Accedi" %>
+  <%= form.submit "Sign in", class: "btn btn-primary" %>
 <% end %>

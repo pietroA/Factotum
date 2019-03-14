@@ -1,1 +1,5 @@
-<%= react_component("HomePage", { current_user: current_user.to_json }) %>
+<% if logged_in?%>
+    <%= react_component("HomePage", { current_user: current_user.to_json }) %>
+<% else %>
+    <%= react_component("HomePage") %>
+<% end %>

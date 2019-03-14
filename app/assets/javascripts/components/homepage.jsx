@@ -4,11 +4,11 @@ class HomePage extends React.Component{
             return <User current_user={this.props.current_user} />
         } else{
             return(
-<header className="jumbotron text-center">
+<article className="text-center">
     <h1>Factotum</h1>
     <a className="btn btn-lg btn-primary" href="/login">Sign in</a>
     <a className="btn btn-lg btn-primary" href="/signup">Sign up</a>
-</header>
+</article>
             );
         }
     }
