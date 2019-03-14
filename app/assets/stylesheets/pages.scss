@@ -1,3 +1,155 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    background: no-repeat fixed radial-gradient(ellipse at top, #BEAAFF, #B7CDFF, #9BC6E8, #AAF0FF, #9B9EE8);
+    color: rgba(20, 20, 20, 0.9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+header{
+    text-align: center;
+    margin: 10px auto;
+    max-width: 700px;
+    background: transparent;
+}
+h1, h2, h3, h4, h5, h6, b, strong, legend, label, button {
+    font-family: 'Shadows Into Light', cursive;
+}
+header h1 {
+    max-width: 700px;
+    border-bottom: 2px solid darkslateblue;
+    box-shadow: rgba(25, 25, 25, 0.6) 15px 15px 15px;
+    background: transparent;
+    background: transparent;
+    padding: 5px 30px;
+    text-align: center;
+    color: darkblue;
+}
+button, label{
+    font-size: 1.2em;
+}
+form, h4, article{
+    padding: 15px;
+    border:  inset 2px darkslateblue;
+    box-shadow: rgba(25, 25, 25, 0.6) 15px 15px 15px;
+    text-align: center;
+}
+form, h4{
+    box-shadow: rgba(70, 70, 70, 0.5) 7px 7px 7px;
+}
+article {
+    text-align: justify;
+    margin: 10px auto;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+form{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+fieldset{
+    margin: 10px auto;
+    max-width: 400px;
+    display: block;
+    padding: 10px;
+    border: inset 2px darkslateblue;
+    legend {
+        border-radius: 50px;
+        border: inset 2px darkslateblue;
+        text-align: center;
+        color: darkblue;
+        }
+}
+label{
+    display: inline-block;
+    width: 100px;
+}
+input{
+    border-radius: 7px;
+    padding: 5px;
+}
+input[type="range"] {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10%;
+}
+.vertical-top{
+    vertical-align: top;
+}
+footer {
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-family: serif;
+    color: dimgray;
+    border-top: inset 2px darkslateblue;
+    text-shadow: 0 1px 0 lightgrey, 0 -1px 0 lightgrey, 1px 0 0 lightgrey, -1px 0 0 lightgrey;
+}
+
+.functions-list{
+    text-align: center;
+    a {
+        display: inline-block;
+        height: 150px;
+        width: 300px;
+        overflow-y: auto;
+        border-radius: 7px;
+        border: inset darkslateblue 2px;
+        h4{
+            border: none;
+            border-top: 1px solid dimgray;
+            border-bottom: 1px solid dimgray;
+            color: darkblue;
+        }
+        margin: 10px;
+    }
+    a:hover{
+        background-color: rgba(25, 25, 25, 0.3);
+    }
+
+}
+
+.right-button{
+    float: right;
+    margin-right: -15px;
+}
+
+ul.results-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: block;
+        height: auto;
+        line-height: 40px;
+        border: 1px solid darkslateblue;
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 669px){
+    .functions-list{
+        a{
+            width: 90%;
+            display: block;
+            margin: 10px auto;
+        }
+    }
+    article{
+        width: 95%;
+    }
+    input, textarea{
+        width: 100%;
+    }
+}
+
