@@ -102,7 +102,7 @@ footer {
     a {
         display: inline-block;
         height: 150px;
-        width: 300px;
+        width: 80%;
         overflow-y: auto;
         border-radius: 7px;
         border: inset darkslateblue 2px;
@@ -150,6 +150,10 @@ ul.results-list{
     }
     input, textarea{
         width: 100%;
+    }
+    .right-button{
+        float: right;
+        margin-right: -30px;
     }
 }
 

@@ -1,7 +1,7 @@
 class HomePage extends React.Component{
     render(){
         if(this.props.current_user){
-            return <User current_user={this.props.current_user} />
+            return <User current_user={this.props.current_user} page={this.props.page} />
         } else{
             return(
 <article className="text-center">

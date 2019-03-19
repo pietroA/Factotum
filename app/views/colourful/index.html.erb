@@ -1,0 +1,22 @@
+<header><h1>Colourful</h1></header>
+<article>
+    <form>
+        <fieldset>
+            <legend>Colore per lo sfondo:</legend>
+            <input type="color" id="bg-selector" name="bg-selector" value="#ffffff" />
+        </fieldset>
+        <fieldset>
+            <legend>Colore per il testo:</legend>
+            <input type="color" id="text-selector" name="text-selector" value="#000000" />
+        </fieldset>
+        <button type="button" onclick="ApplyColors()" >Applica</button>
+        <button type="reset" >Reset</button>
+    </form>
+    <p></p>
+    <div id="result" class="color-picker-sample">
+        <h4>Non sai che colori impostare per lo sfondo o per il testo?</h4>
+        <h4>Scegli un colore, clicca su applica e lo vedrai da te!</h4>
+        <div>Sfondo: <span id="bg-selected"></span></div>
+        <div>Testo: <span id="text-selected"></span></div>
+    </div>
+</article>

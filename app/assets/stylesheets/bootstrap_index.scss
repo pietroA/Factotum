@@ -11,3 +11,10 @@ div.list-group-item {
 p {
     padding: 7px;
 }
+.alert{
+    padding-left: 50px;
+}
+
+.alert-dismissable .close, .alert-dismissible .close{
+    top: -10px;
+}

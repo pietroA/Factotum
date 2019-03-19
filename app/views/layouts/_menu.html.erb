@@ -1,0 +1,19 @@
+<div class="menu-container">
+    <div class="menu">
+        <a href="" id="menu-icon" class="menu-icon"><i class="fa fa-chevron-down"></i></a>
+        <ul class="menu-list" id="menu-list" data-open="false">
+            <li class="menu-list-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+            <li class="menu-list-item"><a href="/tasks">Tasks</a></li>
+            <li class="menu-list-item"><a href="/time_units">Unità di tempo</a></li>
+            <li class="menu-list-item"><a href="/dice_rolls">Tira Dadi</a></li>
+            <li class="menu-list-item"><a href="/color_picker">Colourful</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+$(function(){
+    var menu_icon = document.getElementById("menu-icon");
+    menu_icon.addEventListener('click', ToggleMenu);
+});
+</script>

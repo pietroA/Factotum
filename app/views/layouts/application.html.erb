@@ -12,10 +12,14 @@
 
   <body>
     <%= render 'layouts/flash_messages' %>
-    <%= yield %>
+    <div class="container">
+      <% if logged_in? %>
+        <%= render 'layouts/menu'%>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
 <script>
   var logged_in = "<%= logged_in?%>" == "true";
-  console.log(logged_in);
 </script>
