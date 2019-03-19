@@ -1,3 +1,32 @@
-// Place all the styles related to the Colourful controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.color-picker-sample{
+    transition: 3s all ease-in-out;
+    width: 90%;
+    min-height: 200px;
+    box-shadow: 10px 10px 10px rgba(50,50,50,0.7);
+    border: solid 1px rgba(240,240,240,0.3);
+    margin: auto;
+    h4{
+        border: none;
+        box-shadow: none;
+    }
+    div{
+        padding: 20px;
+        width: 48%;
+        float: left;
+        text-align: center;
+        height: 59px;
+        margin: 1%;
+        background: inherit;
+        border: solid 1px rgba(230, 230, 230, 0.6);
+    }
+}
+
+@media screen and (max-width: 669px){
+    .color-picker-sample{
+        min-height: 250px;
+        div{
+            padding: 10px;
+        }
+    }
+}
+
