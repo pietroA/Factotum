@@ -102,7 +102,7 @@ class UnitTimeForm extends React.Component{
     }
     OnChange(e){
         var name = e.target.name;
-        var value = e.target.value;
+        var value = parseInt(e.target.value);
         this.setState({[name] : value});
     }
     Calculate(){
