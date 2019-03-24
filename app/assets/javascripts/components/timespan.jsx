@@ -122,12 +122,14 @@ return(
         <input type="number" 
                 id="hour_per_day" 
                 name="hour_per_day" 
+                className="small-input"
                 value={this.state.hour_per_day}
                 onChange={this.OnChange} /><br />
         <label htmlFor="lunch">Minuti per il pranzo</label>
         <input type="number" 
                 id="lunch_time" 
                 name="lunch_time" 
+                className="small-input"
                 value={this.state.lunch_time} 
                 onChange={this.OnChange} />
         <fieldset>
@@ -136,6 +138,7 @@ return(
                     id="start_hour" 
                     name="start_hour" 
                     min="0" max="23"
+                    className="small-input"
                     value={this.state.start_hour} 
                     onChange={this.OnChange} />
             :
@@ -143,6 +146,7 @@ return(
                     id="start_minute" 
                     name="start_minute" 
                     min="0" max="59"
+                    className="small-input"
                     value={this.state.start_minute}
                     onChange={this.OnChange} />    
         </fieldset>
@@ -151,6 +155,7 @@ return(
             <input type="number" 
                     id="end_hour" 
                     name="end_hour" 
+                    className="small-input"
                     min="0" max="23"
                     value={this.state.end_hour} 
                     onChange={this.OnChange} />
@@ -159,6 +164,7 @@ return(
                     id="end_minute" 
                     name="end_minute" 
                     min="0" max="59"
+                    className="small-input"
                     value={this.state.end_minute}
                     onChange={this.OnChange} />    
         </fieldset>

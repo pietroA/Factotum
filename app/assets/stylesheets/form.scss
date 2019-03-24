@@ -1,0 +1,59 @@
+button, label{
+    font-size: 1.2em;
+}
+form{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+fieldset{
+    margin: 10px auto;
+    max-width: 400px;
+    display: block;
+    padding: 10px;
+    border: inset 2px darkslateblue;
+    legend {
+        border-radius: 50px;
+        border: inset 2px darkslateblue;
+        text-align: center;
+        color: darkblue;
+        }
+}
+label{
+    display: inline-block;
+    width: auto;
+    margin: 0 10px;
+}
+input{
+    border-radius: 7px;
+    padding: 5px;
+}
+input[type="range"] {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.small-input{
+    width: 75px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 669px){
+    input, textarea{
+        width: 100%;
+    }
+    .right-button{
+        float: right;
+        margin-right: -30px;
+    }
+}
+

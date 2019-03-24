@@ -14,6 +14,9 @@ class User extends React.Component{
         if(this.props.page == 'dice_roller'){
             page = <DiceRoller />
         }
+        if(this.props.page == 'site_functions'){
+            page = <SiteFunctions />;
+        }
 
         return(
 <div className="container">
@@ -30,6 +33,63 @@ class User extends React.Component{
         );
     }
 }
+
+class UserHome extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            user_functions : [],
+            site_functions : [],
+        };
+        this.Load = this.Load.bind(this);
+        this.GetUserFuncs = this.GetUserFuncs.bind(this);
+        this.GetSiteFuncs = this.GetSiteFuncs.bind(this);
+    }
+    componentDidMount(){
+        this.Load();
+    }
+    Load(){
+        this.GetSiteFuncs();
+        this.GetUserFuncs();
+    }
+    GetSiteFuncs(){
+        $.ajax({
+            url: '/api/site_functions/',
+            type: 'GET',
+            success: (site_functions) => { this.setState({site_functions: site_functions}); },
+            error: (xhr, error, status) => { console.log(xhr, error, status); }
+        });
+    }
+    GetUserFuncs(){
+        $.ajax({
+            url: '/api/user_functions/',
+            type: 'GET',
+            success: (user_functions) => { this.setState({user_functions: user_functions}); },
+            error: (xhr, error, status) => { console.log(xhr, error, status); }
+        });
+    }
+    render(){
+        return(
+<div>
+  <ul className="nav nav-tabs" role="tablist">
+    <li role="presentation" className="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#add-functions" aria-controls="add-functions" role="tab" data-toggle="tab">Shop</a></li>
+  </ul>
+
+  <div className="tab-content">
+    <div role="tabpanel" className="tab-pane active" id="home">
+        <UserFunctions user_functions={this.state.user_functions} />
+    </div>
+    <div role="tabpanel" className="tab-pane" id="add-functions">
+        <UserFunctionForms site_functions={this.state.site_functions} user_functions={this.state.user_functions} Reload={this.Load} />
+    </div>
+  </div>
+</div>            
+        );        
+    }
+}
+
+/*
 
 class UserHome extends React.Component{
     render(){
@@ -56,3 +116,4 @@ class UserHome extends React.Component{
         );
     }
 }
+*/

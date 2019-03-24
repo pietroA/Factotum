@@ -21,11 +21,14 @@ Rails.application.routes.draw do
   get 'time_units/index'
   get 'time_units', to: 'time_units#index'
 
-
+  get 'site_functions/index'
+  get 'site_functions', to: 'site_functions#index'
 
   resources :users
   namespace :api do
     resources :tasks
+    resources :site_functions
+    resources :user_functions
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

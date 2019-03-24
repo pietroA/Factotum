@@ -4,7 +4,11 @@ module Api
 
         private
         def check_user
-            render json: {errors: "Sign in to access these data, please", status: :unprocessable_entity} unless logged_in?
+            render json: {errors: "Accedi per visualizzare la pagina", status: :unprocessable_entity} unless logged_in?
+        end
+
+        def check_admin
+            render json: {errors: "Ci dispiace, il tuo account non ha sufficiente autorizzazione per questa funzione.", status: :unprocessable_entity} unless current_user.admin
         end
     end
 end

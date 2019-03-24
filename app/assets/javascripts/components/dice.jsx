@@ -90,16 +90,16 @@ class DiceRollerForm extends React.Component{
 
         for(var i = 0; i < dice.quantity; i++) {
             var result = getRandomNumber(1, dice.faces)
-            console.log(result);
+            //console.log(result);
             results.push( result+ dice.bonus);
         }
-        console.log(results);
+        //console.log(results);
         var total = results.reduce((a, b) => {return a + b; }, dice.bonus_tot);
         this.setState({results: results, total:total});
 
         dice.results = results;
         dice.total = total;
-        console.log(dice);
+        //console.log(dice);
         return dice
     }
     OnChange(e){
@@ -116,6 +116,7 @@ class DiceRollerForm extends React.Component{
                         id="quantity" 
                         min="1"
                         name="quantity"
+                        className="small-input"
                         value={this.state.quantity}
                         onChange={this.OnChange}  />
                 d
@@ -123,6 +124,7 @@ class DiceRollerForm extends React.Component{
                         id="faces" 
                         min="1"
                         name="faces"
+                        className="small-input"
                         value={this.state.faces}
                         onChange={this.OnChange} />    
             </fieldset>
@@ -132,6 +134,7 @@ class DiceRollerForm extends React.Component{
                 <input type="number" 
                         id="bonus" 
                         name="bonus"
+                        className="small-input"
                         min="0"
                         value={this.state.bonus}
                         onChange={this.OnChange}  />
@@ -140,6 +143,7 @@ class DiceRollerForm extends React.Component{
                 <input type="number" 
                         id="bonus_tot" 
                         name="bonus_tot"
+                        className="small-input"
                         value={this.state.bonus_tot}
                         onChange={this.OnChange} />    
             </fieldset>

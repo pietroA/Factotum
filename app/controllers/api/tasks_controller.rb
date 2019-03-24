@@ -1,7 +1,7 @@
 module Api
     class TasksController <  BaseApiController
-        before_action :set_task, only: [:show, :update, :destroy]
         before_action :check_user
+        before_action :set_task, only: [:show, :update, :destroy]
         def index
             render json: current_user.tasks.order(:end_date).all.as_json
         end

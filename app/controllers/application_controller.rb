@@ -9,4 +9,11 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end
   end
+
+  def check_admin
+    unless current_user.admin
+      flash[:warning] = "Ci dispiace, non hai l'autorizzazione per accedere a questa funzione"
+      redirect_to root_url
+    end
+  end
 end

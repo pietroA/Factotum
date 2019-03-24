@@ -1,0 +1,2 @@
+class SiteFunction < ApplicationRecord
+end

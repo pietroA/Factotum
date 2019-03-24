@@ -11,20 +11,3 @@ function SetBodyHeight(){
     }
 }
 
-function ToggleMenu(e){
-    e.preventDefault();
-    var menu = document.getElementById("menu-list");
-    var open = menu.dataset.open;
-
-    var dimension = "";
-    if(open == "true"){
-        dimension = "0";
-        open = "false";
-    } else{
-        dimension = "auto";
-        open = "true";
-    }
-    menu.style.width = dimension;
-    menu.style.height = dimension;
-    menu.dataset.open = open;
-}
