@@ -1,14 +1,15 @@
 module Api
 class SiteFunctionsController < BaseApiController
     before_action :check_user
-    before_action :check_admin
     before_action :set_site_function, only: [:update, :destroy, :show]
 
     def index
         if(current_user.admin)
             render json: SiteFunction.all.as_json
         else
-            render json: SiteFunction.Where(admin: false).all.as_json
+            site_functions = SiteFunction.where(admin: false).all
+            p site_functions
+            render json: site_functions.as_json
         end
     end
 
