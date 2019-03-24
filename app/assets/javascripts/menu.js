@@ -37,9 +37,37 @@ function ToggleMenu(e){
 }
 
 function SetMenu(user_functions) {
+    UnsetAllMenu();
+    SetHomeMenu();
     user_functions.forEach(user_function => {
         SetMenuItem(user_function.site_function);
     });
+}
+
+function UnsetAllMenu() {
+    var ul = document.getElementById('menu-list');
+    while(ul.firstChild){
+        ul.removeChild(ul.firstChild);
+    }
+}
+function SetHomeMenu() {
+    var li = document.createElement('li');
+    li.className = "menu-list-item";
+    li.id = 'menu-item-home';
+    var a = document.createElement('a');
+    var i = document.createElement('i');
+    i.classList.add('fa');
+    i.classList.add('fa-home');
+    a.appendChild(i);
+
+    a.href = '/';
+    var span = document.createElement('span');
+    span.textContent = ' Home ';
+    a.appendChild(span);
+
+    var ul = document.getElementById('menu-list');
+    li.appendChild(a);
+    ul.appendChild(li);
 }
 
 function SetMenuItem(site_function){
@@ -48,7 +76,9 @@ function SetMenuItem(site_function){
     li.id = 'menu-item-'+site_function.id;
     var a = document.createElement('a');
     a.href = '/'+site_function.url;
-    a.text = site_function.name;
+    var span = document.createElement('span');
+    span.textContent = site_function.name;
+    a.appendChild(span);
     li.appendChild(a);
 
     var ul = document.getElementById('menu-list');

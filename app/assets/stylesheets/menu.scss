@@ -36,14 +36,17 @@
                 background-color: lightblue;
                 color: darkblue;
                 font-weight: bold;
-                min-width: 250px;
+                width: 250px;
                 min-height: 30px;
                 text-align: left;
                 padding: 3px 7px;
                 a{
                     display: block;
-                    width: 100%;
+                    width: 245px;
                     height: 100%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
                 a:hover, a:active{
                     text-decoration: none;
